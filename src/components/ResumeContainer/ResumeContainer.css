@@ -1,0 +1,82 @@
+.resume {
+  border-radius: 25px;
+  padding: 2em 2em 0em 2em;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  position: relative;
+  
+}
+
+.resume:hover {
+  box-shadow: var(--shadowmore);
+}
+
+.resume__description {
+  margin-top: 1em;
+}
+
+.resume__skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 1.2em 0;
+  position: relative;
+}
+
+.resume__skills-item {
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+.resume .link--icon {
+  margin-left: 0.5em;
+}
+
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.role-and-company {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.resume-role {
+  font-size: 1.4em;
+}
+
+.resume-company {
+  font-size: 1.1em;
+  padding: 0.2em 0em 1em 0em;
+}
+
+.resume-dates {
+  font-size: 0.9em;
+  text-align: right;
+}
+.resume-description {
+  font-size: 0.95em;
+  white-space: pre-wrap; /* or 'pre' */
+}
+
+.resume-name {
+  text-align: left;
+}
+
+.resume .link--icon {
+  margin-left: 0.5em;
+  position: absolute;
+  bottom: -1em;
+  right: 0;
+  margin: 1.2em;
+}
