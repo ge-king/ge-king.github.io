@@ -2,16 +2,29 @@
   border-radius: 25px;
   padding: 2em 2em 0em 2em;
   margin: 0 auto;
+  background-color: var(--clr-bg);
   width: 100%;
   text-align: left;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
   position: relative;
+
+  /* From https://css.glass */
+
+border-radius: 16px;
+
+
+border: 1px solid var(--clr-glass);
   
 }
 
 .resume:hover {
   box-shadow: var(--shadowmore);
+  background-color: var(--clr-hover);
+  /* outline-style: solid;
+  outline-width: 0.05em;
+  outline-color: var(--clr-fg); */
+  border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .resume__description {

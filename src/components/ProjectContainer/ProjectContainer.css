@@ -2,13 +2,21 @@
   border-radius: 25px;
   padding: 2em;
   margin: 0 auto;
+  background-color: var(--clr-bg);
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+
+  border-radius: 16px;
+
+
+border: 1px solid var(--clr-glass);
 }
 
 .project:hover {
   box-shadow: var(--shadowmore);
+  background-color: var(--clr-hover);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   
 }
 

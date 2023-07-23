@@ -7,22 +7,30 @@
 
 .light {
   --clr-bg: #fcfcfc;
+  --clr-hover: #ffffff;
+  --clr-glass: #59595912;
+  --clr-glass-hover: #33333350;
   --clr-bg-alt: #fff;
   --clr-fg: #555;
   --clr-fg-alt: #444;
   --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --shadow: rgba(193, 193, 193, 0.2) 0px 2px 9px 0px;
   --shadowmore: rgba(100, 100, 111, 0.2) 5px 15px 45px 2px;
 }
 
 .dark {
   --clr-bg: #23283e;
+  --clr-glass: #ffffff12;
+  --clr-glass-hover: #fbfbfb50;
+  --clr-hover: #2b304a;
   --clr-bg-alt: #2a2f4c;
   --clr-fg: #bdbddd;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadowmore: rgba(0, 0, 0, 0.16) 5px 15px 15px 2px,
+    rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
 }
 
 main {

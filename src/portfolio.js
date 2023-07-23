@@ -8,7 +8,7 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'George King',
   description:
-    'Aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the Univeristy of Bath. Current Software Intern at Callen-Lenz Inc.',
+    'Hi! Im an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz Inc.',
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',

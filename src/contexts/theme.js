@@ -1,18 +1,11 @@
-import { createContext, useEffect, useState } from 'react'
+import { createContext, useState } from 'react'
 import PropTypes from 'prop-types'
 
 const ThemeContext = createContext()
 
 const ThemeProvider = ({ children }) => {
-  const [themeName, setThemeName] = useState('light')
-
-  useEffect(() => {
-    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setThemeName(darkMediaQuery.matches ? 'dark' : 'light')
-    darkMediaQuery.addEventListener('change', (e) => {
-      setThemeName(e.matches ? 'dark' : 'light')
-    });
-  }, [])
+  const storedThemeName = localStorage.getItem('themeName') || 'dark'; // set the initial state to dark or previously stored value
+  const [themeName, setThemeName] = useState(storedThemeName)
 
   const toggleTheme = () => {
     const name = themeName === 'dark' ? 'light' : 'dark'
