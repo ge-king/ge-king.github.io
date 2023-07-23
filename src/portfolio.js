@@ -26,7 +26,6 @@ const projects = [
       'An automated blogging tool, using the OpenAI GPT API and Wordpress HTTP API to automatically generate and post blog posts on any topic. Allows for thousands of blog posts to be generated, including royalty free image sourcing and implementation, rich articles, meta generation, auto tagging, SEO. GUI currently written in tkinter, moving to Electron.',
     stack: ['Python', 'HTTP', 'AI', 'GUI'],
     sourceCode: 'https://github.com/ge-king/ai_blog',
-    livePreview: 'https://github.com',
   },
     {
     name: 'The Mach Initiative',
@@ -38,34 +37,31 @@ const projects = [
   {
     name: 'crawl.pub',
     description:
-      'Design your own custom pub crawl, and plan it out on a map.',
+      'Design your own custom pub crawl, and plan it out on a map. Coming soon!',
     stack: ['Flutter', 'Dart'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    livePreview: 'https://crawl.pub',
   },
   {
     name: 'Yikes! Zombies! Run! 3',
     description:
-      `The third installment in the YZR game series. The first two games were developed in Monkey X, by my father Tom. It's time for YZR3! This game is currently being written in the awesome open-source Godot.`,
+      `The third installment in the YZR game series. The first two games were developed in Monkey X, by my father Tom. It's time for YZR3! This game is currently being written in the awesome open-source Godot. Play a (very early) version below!`,
     stack: ['Godot', 'GdScript', 'HTML'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    sourceCode: 'https://github.com/ge-king/yzr3',
+    livePreview: 'https://georgeking.uk/yzr3/HTML/yzr3.html',
   },
   {
     name: 'Project Orbital',
     description:
       'A python/MATLAB project, which utilises various modelling techniques (Runge-Kutta etc.) to simulate advanced orbital manoeuvres around the solar system.',
     stack: ['Python','MATLAB'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    sourceCode: 'https://github.com/ge-king/ProjectOrbital',
   },
   {
     name: 'Various Python Projects',
     description:
       `Various Python projects I've dabbled in, ranging from photo EXIF removers to Github readme generators to asymmetric cyphers. Take a look!`,
     stack: ['Python'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+    sourceCode: 'https://github.com/ge-king',
   },
 
 ]

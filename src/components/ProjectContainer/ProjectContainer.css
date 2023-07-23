@@ -2,22 +2,44 @@
   border-radius: 25px;
   padding: 2em;
   margin: 0 auto;
-  background-color: var(--clr-bg);
+  width: 100%;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, background 0.5s;
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1;
+}
 
-  border-radius: 16px;
-
-
-border: 1px solid var(--clr-glass);
+.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-glass);
+  z-index: -1;
+  border-radius: 25px;
+  opacity: 0.1;
 }
 
 .project:hover {
   box-shadow: var(--shadowmore);
-  background-color: var(--clr-hover);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  
+}
+
+.project:hover::before {
+  --clr-glass: var(--clr-glass-hover);
+  opacity: 0.2;
+}
+
+.project * {
+  position: relative;
+  z-index: 2;
 }
 
 .project__description {

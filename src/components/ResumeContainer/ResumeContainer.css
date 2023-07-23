@@ -2,29 +2,57 @@
   border-radius: 25px;
   padding: 2em 2em 0em 2em;
   margin: 0 auto;
-  background-color: var(--clr-bg);
   width: 100%;
   text-align: left;
   box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, background 0.5s;
   position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 1;
+}
 
-  /* From https://css.glass */
-
-border-radius: 16px;
-
-
-border: 1px solid var(--clr-glass);
-  
+.resume::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-glass);
+  z-index: -1;
+  border-radius: 25px;
+  opacity: 0.1; /* Reduced opacity for a more transparent look */
 }
 
 .resume:hover {
   box-shadow: var(--shadowmore);
-  background-color: var(--clr-hover);
-  /* outline-style: solid;
-  outline-width: 0.05em;
-  outline-color: var(--clr-fg); */
   border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.resume:hover::before {
+  --clr-glass: var(--clr-glass-hover);
+  opacity: 0.2; /* Increased opacity on hover */
+}
+
+
+.resume::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+  opacity: 0;
+
+}
+
+.resume:hover::after {
+  opacity: 0.1;
 }
 
 .resume__description {
