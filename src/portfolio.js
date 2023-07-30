@@ -8,7 +8,7 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'George King',
   description:
-    'Hi! Im an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz Inc.',
+    `Hi! I'm an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz Inc.`,
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',
@@ -37,8 +37,8 @@ const projects = [
   {
     name: 'crawl.pub',
     description:
-      'Design your own custom pub crawl, and plan it out on a map. Coming soon!',
-    stack: ['Flutter', 'Dart'],
+      'Design your own custom pub crawl, and plan it out on a map. Designed and built in React.JS, using the Google Maps API and the Google Places API. Deployed on Netlify. MongoDB backend in progress, to enable user accounts and saving of pub crawls.',
+    stack: ['Javascript', 'CSS', 'React.JS','HTML','Netlify'],
     livePreview: 'https://crawl.pub',
   },
   {
