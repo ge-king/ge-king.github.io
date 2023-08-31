@@ -8,7 +8,7 @@ const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'George King',
   description:
-    `Hi! I'm an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz Inc.`,
+    `Hi! I'm an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz.`,
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',
@@ -23,7 +23,7 @@ const projects = [
   {
     name: 'AI Blogger',
     description:
-      'An automated blogging tool, using the OpenAI GPT API and Wordpress HTTP API to automatically generate and post blog posts on any topic. Allows for thousands of blog posts to be generated, including royalty free image sourcing and implementation, rich articles, meta generation, auto tagging, SEO. GUI currently written in tkinter, moving to Electron.',
+      'An automated blogging tool, using the OpenAI GPT API and Wordpress HTTP API to automatically generate and post blog posts on any topic. Allows for thousands of blog posts to be generated, including royalty free image sourcing and implementation, rich articles, meta generation, auto tagging, SEO. GUI currently written in tkinter, moving to React.',
     stack: ['Python', 'HTTP', 'AI', 'GUI'],
     sourceCode: 'https://github.com/ge-king/ai_blog',
   },
@@ -37,7 +37,7 @@ const projects = [
   {
     name: 'crawl.pub',
     description:
-      'Design your own custom pub crawl, and plan it out on a map. Designed and built in React.JS, using the Google Maps API and the Google Places API. Deployed on Netlify. MongoDB backend in progress, to enable user accounts and saving of pub crawls.',
+      'Design your own custom pub crawl, and plan it out on a map. Designed and built in React.JS, using the Google Maps API and the Google Places API. Deployed on Netlify. Save and share your crawl - backend using Firestore DB.',
     stack: ['Javascript', 'CSS', 'React.JS','HTML','Netlify'],
     livePreview: 'https://crawl.pub',
   },
@@ -50,10 +50,10 @@ const projects = [
     livePreview: 'https://georgeking.uk/yzr3/HTML/yzr3.html',
   },
   {
-    name: 'Project Orbital',
+    name: 'cv-generator',
     description:
-      'A python/MATLAB project, which utilises various modelling techniques (Runge-Kutta etc.) to simulate advanced orbital manoeuvres around the solar system.',
-    stack: ['Python','MATLAB'],
+      'Ongoing project. A simple CV generator, written in Rust. Will generate a LaTeX CV from a simple JSON file. Currently in development, but will be available on crates.io when complete.',
+    stack: ['Rust','LaTeX','JSON','CLI'],
     sourceCode: 'https://github.com/ge-king/ProjectOrbital',
   },
   {
@@ -73,7 +73,7 @@ const resume = [
     role: 'Software Engineering Intern',
 	dates: 'June 2023 - September 2023',
     description: 'Intern in the software team at Callen-Lenz, a market-leading UK SME delivering operationally proven capabilities, bespoke platforms, rapid prototyping and avionics, as well as complementary technical consultancy for uncrewed and crewed aviation.',
-	skills: ['Rust', 'Python', 'Git', 'Agile', 'Jira'],
+	skills: ['Rust', 'Python', 'Git', 'Agile', 'Jira', 'C#'],
 	website: 'https://callenlenz.com',
   },
   
@@ -91,7 +91,7 @@ const resume = [
     role: 'Engineering Intern',
 	dates: 'August 2021 - August 2022',
     description: "- Detailed design and 3D CAD modelling of industrial machines for pharmaceutical use.\n- Member of multiple design teams, with experience designing core machine modules (web handling system for a £1M+ machine, machine-device interface for similar large project).\n- Built and ran proof-of-concept rigs, analysing data and presenting information to design teams.\n- Worked with multiple large international clients, under strict NDA.\n- Analysed large datasets from standard machines with a variety of placebos and drugs, informing various projects on the compatibility of powders with 3P’s standard filling technologies.\n- Liaised with international clients\n- Involved in update of company’s COSHH (Control of Substances Hazardous to Health) guidelines.",
-	skills: ['Autodesk Suite', 'Excel', 'Technical Drawing', 'Presentation', 'Mechanical Engineering'],
+	skills: ['Autodesk Suite', 'Excel', 'Data Analysis', 'Technical Drawing', 'Presentation', 'Mechanical Engineering'],
 	website: 'https://3pinnovation.com',
   },
   
@@ -110,12 +110,16 @@ const skills = [
   // if there are no skills, Skills section won't show up
   'Rust',
   'Python',
+  'C#',
   'C',
   'MATLAB',
   'Javascript',
   'React',
   'Git',
   'Jira',
+  'Agile',
+  'LaTeX',
+  'CLI',
 ]
 
 const contact = {
@@ -123,4 +127,4 @@ const contact = {
   email: 'georgepking@gmail.com',
 }
 
-export { header, about, projects, resume, skills, contact }
+export { header, about, resume, projects, skills, contact }
