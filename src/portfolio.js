@@ -7,8 +7,9 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'George King',
+  image: '/images/profile.png',
   description:
-    `Hi! I'm an aspiring Financial Software Engineer, currently studying in my final year of a MEng Aerospace Engineering at the University of Bath. Current Software Intern at Callen-Lenz.`,
+    `Hi! I'm a final-year MEng Aerospace Engineering student at the University of Bath, specializing in software. For my final year project, I'm working on multi-scale finite element modelling of fibreglass composite UAV skins, using neural networks as surrogates for micro-scale simulations.`,
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',
@@ -21,48 +22,92 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'AI Blogger',
-    description:
-      'An automated blogging tool, using the OpenAI GPT API and Wordpress HTTP API to automatically generate and post blog posts on any topic. Allows for thousands of blog posts to be generated, including royalty free image sourcing and implementation, rich articles, meta generation, auto tagging, SEO. GUI currently written in tkinter, moving to React.',
-    stack: ['Python', 'HTTP', 'AI', 'GUI'],
-    sourceCode: 'https://github.com/ge-king/ai_blog',
-  },
-    {
     name: 'The Mach Initiative',
     description:
-      'The Mach Initiative, a student-run body started in 2022, aims to build the worlds fastest remote-control plane. As structural lead, I devised a unique approach to minimize weight in a fibreglass composite skin delta wing facing large forces, which were verified in Ansys ACP. I rebranded the project and developed the website.',
-    stack: ['Aerospace', 'MATLAB', 'Webflow','Design'],
+      'The Mach Initiative, a student-run body started in 2022, aims to build the worlds fastest remote-control plane. I led the structural development, branding, and website design.',
+    stack: [ 'MATLAB', 'Webflow','Design'],
+    category: 'Uni',
+    sourceCode: 'mach',
     livePreview: 'https://themachinitiative.com',
+    image: '/images/machheader.png',
   },
+
   {
-    name: 'crawl.pub',
+    name: 'Crawl.Pub',
     description:
-      'Design your own custom pub crawl, and plan it out on a map. Designed and built in React.JS, using the Google Maps API and the Google Places API. Deployed on Netlify. Save and share your crawl - backend using Firestore DB.',
-    stack: ['Javascript', 'CSS', 'React.JS','HTML','Netlify'],
-    livePreview: 'https://crawl.pub',
+      'Design your own custom pub crawl, and plan it out on a map. Designed and built in React.JS, using the Google Maps API and the Google Places API. Deployed on Netlify. Save and share your crawl!',
+    stack: [ 'React', 'CSS','HTML','Netlify'],
+    sourceCode: 'pubcrawl',
+    category: 'Personal',
+    image: '/images/crawlpub.png',
   },
+
+  {
+    name: 'MapDate',
+    description:
+      'Answer questions to figure out exactly when your weird map was made! Built in React, using Mapbox GL JS, deployed on Vercel, with Python backend on Heroku.',
+    stack: [ 'React', 'CSS','Python','Vercel','Heroku'],
+    sourceCode: 'https://mapdater.vercel.app/',
+    category: 'Personal',
+    image: '/images/mapdate.png',
+  },
+
+  {
+    name: 'AI Blogger',
+    description:
+      'An automated blogging tool, using the OpenAI GPT API and Wordpress HTTP API to automatically generate and post blog posts on any topic.',
+    stack: ['Python', 'HTTP', 'AI', 'GUI'],
+    sourceCode: 'aiblog',
+    category: 'Personal',
+    image: '/images/aiblog.png',
+  },
+    
   {
     name: 'Yikes! Zombies! Run! 3',
     description:
-      `The third installment in the YZR game series. The first two games were developed in Monkey X, by my father Tom. It's time for YZR3! This game is currently being written in the awesome open-source Godot. Play a (very early) version below!`,
+      `The third installment in the YZR series. The first two were developed by my father Tom. It's time for YZR3! This game is currently being written in the open-source Godot. Play a (very early) version!`,
     stack: ['Godot', 'GdScript', 'HTML'],
-    sourceCode: 'https://github.com/ge-king/yzr3',
-    livePreview: 'https://georgeking.uk/yzr3/HTML/yzr3.html',
-  },
-  {
-    name: 'cv-generator',
-    description:
-      'Ongoing project. A simple CV generator, written in Rust. Will generate a LaTeX CV from a simple JSON file. Currently in development, but will be available on crates.io when complete.',
-    stack: ['Rust','LaTeX','JSON','CLI'],
-    sourceCode: 'https://github.com/ge-king/ProjectOrbital',
+    category: 'Personal',
+    sourceCode: 'https://georgeking.uk/yzr3/HTML/yzr3.html',
+    image: '/images/yzr.png',
   },
   {
     name: 'Various Python Projects',
     description:
       `Various Python projects I've dabbled in, ranging from photo EXIF removers to Github readme generators to asymmetric cyphers. Take a look!`,
     stack: ['Python'],
+    category: 'Personal',
     sourceCode: 'https://github.com/ge-king',
+    image: '/images/various.png',
   },
+  {
+    name: 'Modelling of a Space Shuttle Heatshield Tile',
+    description:
+      `The MATLAB modelling of heat transfer through a tile from a Space Shuttle's heatshield, during re-entry. Uses various finite difference methods to solve the heat equation.`,
+    stack: [ 'MATLAB'],
+    category: 'Uni',
+    sourceCode: 'shuttle',
+    image: '/images/shuttle.png',
+  },
+  {
+    name: 'Simulation of probe aerocapture around Venus',
+    description:
+      `Simulation in MATLAB of a probe being captured into orbit around Venus, using an aerocapture manoeuvre. Uses decomposed differential equations to solve quickly. Also simulates a circularisation burn.`,
+    stack: [ 'MATLAB'],
+    category: 'Uni',
+    sourceCode: 'venus',
+    image: '/images/venus.png',
+  },
+  {
+    name: 'Analytical Design of a hat-stiffened CFRP panel',
+    description:
+      `This project involved the analytical design of a hat-stiffened CFRP composite wing panel for a fictional passenger aircraft undergoing a particular load-case.`,
+    stack: [ 'MATLAB'],
+    category: 'Uni',
+    sourceCode: 'wing',
+    image: '/images/wing.png',
+  },
+
 
 ]
 
@@ -70,38 +115,42 @@ const projects = [
 const resume = [
 	{
     company: 'Callen-Lenz',
-    role: 'Software Engineering Intern',
+    role: 'Software Engineering Intern 💻',
 	dates: 'June 2023 - September 2023',
     description: 'Intern in the software team at Callen-Lenz, a market-leading UK SME delivering operationally proven capabilities, bespoke platforms, rapid prototyping and avionics, as well as complementary technical consultancy for uncrewed and crewed aviation.',
 	skills: ['Rust', 'Python', 'Git', 'Agile', 'Jira', 'C#'],
 	website: 'https://callenlenz.com',
+  image: '/images/callen.png',
   },
   
   {
     company: 'The Mach Initiative',
-    role: 'Aerospace Structures, Marketing and Web Development',
+    role: 'Aerospace Structures, Marketing and Web Development ✈️',
 	dates: 'January 2023 - Ongoing',
     description: "Aircraft Structures Lead for the Mach Initiative. The Mach Initiative is a student-run organisation, with the goal of developing the world's fastest remote-control aircraft. Secondary role of Marketing & Design. \n- Built MATLAB tool suite to determine ideal composite skin thickness and layup, using various composite structure and failure theories. \n- Performed in-depth structural failure analysis in Ansys. \n- Produced a complete structural design in CAD. \n- Comprehensively overhauled branding strategy. \n- Redesigned website from the ground up.",
 	skills: ['MATLAB', 'Python', 'Aerospace', 'LaTeX', 'Ansys', 'Blender', 'DaVinci Resolve', 'Webflow'],
 	website: 'https://www.themachinitiative.com/',
+  image: '/images/mach.png',
   },
   
   {
     company: '3P innovation Ltd.',
-    role: 'Engineering Intern',
+    role: 'Engineering Intern ⚙️',
 	dates: 'August 2021 - August 2022',
     description: "- Detailed design and 3D CAD modelling of industrial machines for pharmaceutical use.\n- Member of multiple design teams, with experience designing core machine modules (web handling system for a £1M+ machine, machine-device interface for similar large project).\n- Built and ran proof-of-concept rigs, analysing data and presenting information to design teams.\n- Worked with multiple large international clients, under strict NDA.\n- Analysed large datasets from standard machines with a variety of placebos and drugs, informing various projects on the compatibility of powders with 3P’s standard filling technologies.\n- Liaised with international clients\n- Involved in update of company’s COSHH (Control of Substances Hazardous to Health) guidelines.",
 	skills: ['Autodesk Suite', 'Excel', 'Data Analysis', 'Technical Drawing', 'Presentation', 'Mechanical Engineering'],
 	website: 'https://3pinnovation.com',
+  image: '/images/3p.png',
   },
   
   {
     company: 'University of Bath',
-    role: 'Aerospace Engineering MEng',
+    role: 'Aerospace Engineering MEng 👨‍🎓',
 	dates: 'September 2019 - July 2024',
-    description: '- Currently studying at first-class level. \n- Final year modules:\n  - Final year project (potentially high-speed UAV digital twin design.) \n  - Heat transfer \n  - System modelling and simulation \n  - Business processes \n  - Advanced helicopter dynamics \n  - Spacecraft engineering ',
+    description: '- Currently studying at first-class level. \n- Final year modules:\n  - Final Year Project \n  - Heat transfer \n  - System modelling and simulation \n  - Business processes \n  - Advanced helicopter dynamics \n  - Spacecraft engineering ',
 	skills: ['MATLAB', 'Python', 'Aerospace', 'LaTeX', 'Ansys', 'Blender', 'DaVinci Resolve', 'Webflow'],
 	website: 'https://bath.ac.uk',
+  image: '/images/bath.png',
   },
 ]
 
@@ -111,7 +160,6 @@ const skills = [
   'Rust',
   'Python',
   'C#',
-  'C',
   'MATLAB',
   'Javascript',
   'React',
@@ -119,7 +167,6 @@ const skills = [
   'Jira',
   'Agile',
   'LaTeX',
-  'CLI',
 ]
 
 const contact = {
