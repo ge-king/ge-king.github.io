@@ -17,6 +17,7 @@
 @media (max-width: 600px) {
   .nav__list {
     display: none;
+    background-color: var(--clr-bg);
     flex-direction: column;
     justify-content: center;
     align-items: center;

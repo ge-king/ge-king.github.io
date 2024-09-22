@@ -1,11 +1,16 @@
 .footer {
   padding: 3em 0;
+  font-size: 0.66rem;
   margin-top: 4em;
   text-align: center;
 }
 
+.footer div:first-child {
+  margin-bottom: 20px;
+}
+
 .footer__link {
-  font-size: 0.55rem;
+  
   font-weight: 600;
   color: var(--clr-fg);
 }

@@ -2,14 +2,13 @@
   border-radius: 25px;
   padding: 2em 2em 0em 2em;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   text-align: left;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear, background 0.5s;
   position: relative;
   background: transparent;
   border: 1px solid transparent;
-  backdrop-filter: blur(10px);
   overflow: hidden;
   z-index: 1;
 }
@@ -29,7 +28,7 @@
 
 .resume:hover {
   box-shadow: var(--shadowmore);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(165, 165, 165, 0.09);
 }
 
 .resume:hover::before {
@@ -106,7 +105,7 @@
   text-align: right;
 }
 .resume-description {
-  font-size: 0.95em;
+  font-size: 0.85em;
   white-space: pre-wrap; /* or 'pre' */
 }
 
@@ -120,4 +119,16 @@
   bottom: -1em;
   right: 0;
   margin: 1.2em;
+}
+
+.resume-image-container {
+  display: block; /* Show the container on desktop */
+  position: absolute;
+  max-height: 6em;
+  filter: var(--image-filter);
+  right: 1em; /* Align to the right */
+  bottom: 1em;
+  background-size: cover;
+  opacity: 0.2; /* Adjust for desired transparency */
+  z-index: -1; /* Ensures the image is behind the text */
 }

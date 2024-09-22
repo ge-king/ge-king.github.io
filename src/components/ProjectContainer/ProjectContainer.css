@@ -1,17 +1,17 @@
 .project {
   border-radius: 25px;
-  padding: 2em;
+  padding: 0em;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear, background 0.5s;
   position: relative;
   background: transparent;
   border: 1px solid transparent;
-  backdrop-filter: blur(10px);
   overflow: hidden;
   z-index: 1;
+  position: relative
 }
 
 .project::before {
@@ -25,6 +25,17 @@
   z-index: -1;
   border-radius: 25px;
   opacity: 0.1;
+}
+
+.my-atropos-project {
+  height: 380px; 
+  
+}
+
+.atropos-inner.project {
+  display: flex;           /* Enable Flexbox */
+  flex-direction: column;  /* Stack children vertically */
+  height: 100%;            /* Optional: Adjust the height as necessary */
 }
 
 .project:hover {
@@ -42,24 +53,95 @@
   z-index: 2;
 }
 
+.project__interior {
+  padding: 1em 2em 0em 2em;
+  display: flex;
+  height: 58%;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
 .project__description {
+  
   margin-top: 1em;
+  font-size: 0.8rem;
+  flex-grow: 0.8;
+  text-align: left;
 }
 
 .project__stack {
+  position: absolute;
+  top: 33%;
+  z-index: 3;
+  right: 5px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 1.2em 0;
+  justify-content: right;
+  margin: 0em ;
+}
+
+.project__title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: left;
+  color: var(--clr-fg-alt);
+}
+
+.project-category {
+  position: absolute;
+  top: 33.5%;
+  left: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  box-shadow: 0 1px 2px 0 rgba(0, 77, 64, 0.2); /* Shadow for depth */
+  background-color: var(--itemcolour);
+  border: 1px solid var(--shadowmore);
+  border-radius: 5px;
+  padding: 0em 0.3em;
+  color: rgb(71, 71, 71); /* Adjust as needed */
+  z-index: 3; /* Ensure it's above the image */
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.project-category.uni {
+  color: var(--unicolour); /* Blue text for 'Uni' category */
+}
+
+.project-category.personal {
+  color:var(--personalcolour); /* Purple text for 'Personal' category */
 }
 
 .project__stack-item {
-  margin: 0.5em;
+  margin: 0.2em;
+  padding: 0em 0.3em; /* Increased padding for better visibility */
   font-weight: 500;
   font-size: 0.8rem;
-  color: var(--clr-fg-alt);
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  box-shadow: 0 1px 2px 0 rgba(0, 77, 64, 0.2); /* Shadow for depth */
+  background-color: var(--itemcolour);
+  border: 1px solid var(--shadowmore);
+  color: var(--textcolour);
 }
 
 .project .link--icon {
   margin-left: 0.5em;
+}
+
+.project-image {
+  width: 100%;
+  height: 42%;
+  max-height:42%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  margin-right: 0;
 }

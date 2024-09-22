@@ -1,0 +1,51 @@
+.project__stack_page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0 0;
+}
+
+.project__stack_page-item {
+  margin: 0.5em;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--clr-fg-alt);
+}
+
+/* Styles for the main container */
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for the headline image */
+.headline-image {
+  width: 100%;
+  height: 20%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles for the title container */
+.title-container {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Styles for the title heading */
+.title-heading {
+  display: inline;
+  margin: 0;
+}
+
+/* Styles for paragraphs */
+.info-paragraph {
+  margin-bottom: 10px;
+}

@@ -4,7 +4,37 @@
 }
 
 .about__name {
-  color: var(--clr-primary);
+  background-image: linear-gradient(92deg, #f35626, #fea63a);
+  background-clip: text;
+  color: transparent; /* Fallback for browsers that do not support background-clip: text */
+  animation: hue 120s infinite linear;
+}
+
+.about__desc__and__img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__image {
+  position: relative;
+  top: 7px; 
+  width: 10em; 
+  height: 10em; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-left: 20px;
+  margin-top: 20px; 
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .about__role {
@@ -34,4 +64,28 @@
     align-items: flex-start;
     margin-top: 2em;
   }
+
+  .about__desc__and__img {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Vertically align items */
+  }
+
+  .about__image {
+    position: relative;
+    top: 4px; 
+    width: 7em; 
+    height: 7em; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-left: 0px;
+    margin-top: 5px; 
+  }
+
+  .about__name {
+    margin-bottom: 0; /* Adjust as needed */
+    align-self: center; /* Align name vertically center to the image */
+  }
 }
+

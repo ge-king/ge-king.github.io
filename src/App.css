@@ -12,42 +12,50 @@ body {
   color: var(--clr-fg);
   /*background: var(--clr-bg) radial-gradient(50px at var(--x) var(--y), var(--clr-primary), transparent);*/
   background: radial-gradient(300px circle at var(--x) var(--y), var(--clr-glow), var(--clr-bg));
-  transition: background 0.1s;
-  /* ...rest of your styles */
 }
 
 
-
 .light {
-  --clr-bg: #0E172A;
-  --clr-glass: #ffffff12;
-  --clr-glass-hover: #132042;
-  --clr-hover: #132042;
-  --clr-glow: #132042;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+  --clr-bg: #ededed;
+  --clr-glass: #d1d0d012;
+  --clr-glass-hover: #ffffff;
+  --clr-hover: #ffffff;
+  --clr-glow: #ffffff;
+  --clr-bg-alt: #fff;
+  --clr-fg: #555;
+  --textcolour: #555;
+  --itemcolour: #ffffff9c;
+  --clr-fg-alt: #444;
+  --clr-primary: #2978b5;
+  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --shadowmore: rgba(0, 0, 0, 0.16) 5px 15px 15px 2px,
-    rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+    rgba(38, 38, 38, 0.06) 0px 0px 0px 1px;
+  --unicolour: rgb(0, 171, 117);
+  --personalcolour: rgb(170, 0, 170);
+  --image-filter: none;
 }
 
 .dark {
   --clr-bg: #0E172A;
   --clr-glass: #ffffff12;
-  --clr-glass-hover: #132042;
+  --clr-glass-hover: #576689;
   --clr-hover: #132042;
+  --textcolour: #ffffff;
+  --itemcolour: #0000009c;
   --clr-glow: #132042;
   --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
+  --clr-fg: #f0f0f0;
   --clr-fg-alt: #cdcdff;
   --clr-primary: #90a0d9;
   --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --shadowmore: rgba(0, 0, 0, 0.16) 5px 15px 15px 2px,
     rgba(255, 255, 255, 0.06) 0px 0px 0px 1px;
+    --unicolour: rgb(64, 255, 194);
+  --personalcolour: rgb(255, 81, 255);
+  --image-filter: invert(100%);
+  
 }
 
 main {
@@ -73,7 +81,7 @@ main {
 
 .link {
   color: var(--clr-primary);
-  padding: 0 0 0.3em 0;
+  padding: 0em 0 0em 0;
   position: relative;
 }
 
@@ -112,6 +120,14 @@ main {
   cursor: pointer;
   padding: 0.8em 1.4em;
   font-weight: 500;
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  box-shadow: 0 1px 2px 0 rgba(0, 77, 64, 0.2); /* Shadow for depth */
+  background-color: var(--itemcolour);
+  border: 1px solid var(--shadowmore);
+  color: var(--textcolour);
   font-size: 0.9rem;
   text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
