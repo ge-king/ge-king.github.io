@@ -9,7 +9,7 @@ const about = {
   name: 'George King',
   image: '/images/profile.png',
   description:
-    `Hi! I'm a final-year MEng Aerospace Engineering student at the University of Bath, specializing in software. For my final year project, I'm working on multi-scale finite element modelling of fibreglass composite UAV skins, using neural networks as surrogates for micro-scale simulations.`,
+    `Hi! I'm a Gradute Software Engineer at Ocado Technology, in the machine learning team. On this site you can find my past experience, projects, and education.`,
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',
@@ -113,11 +113,20 @@ const projects = [
 
 
 const resume = [
+  {
+    company: 'Ocado Technology',
+    role: 'Software Engineering Graduate 💻',
+	dates: 'September 2024 - current',
+    description: 'Software Engineering graduate at Ocado Technology, aiming to disrupt the way the world shops with advanced technology.\n- Currently in the machine learning research team',
+	skills: ['Machine Learning', 'Python', 'Google Cloud', 'Big Data', 'Pipelines', 'SQL'],
+	website: 'https://ocadogroup.com',
+  image: '/images/ocado.png',
+  },
 	{
     company: 'Callen-Lenz',
     role: 'Software Engineering Intern 💻',
 	dates: 'June 2023 - September 2023',
-    description: 'Intern in the software team at Callen-Lenz, a market-leading UK SME delivering operationally proven capabilities, bespoke platforms, rapid prototyping and avionics, as well as complementary technical consultancy for uncrewed and crewed aviation.',
+    description: 'Intern in the software team at Callen-Lenz, a market-leading UK SME delivering operationally proven capabilities, bespoke platforms, rapid prototyping and avionics, as well as complementary technical consultancy for uncrewed and crewed aviation.\n- Designed a standalone Rust-based program to interface with proprietary hardware over Websocket \n- Integrated into the company\'s flagship C# product\n- Fixed multiple bugs across ground control software',
 	skills: ['Rust', 'Python', 'Git', 'Agile', 'Jira', 'C#'],
 	website: 'https://callenlenz.com',
   image: '/images/callen.png',
@@ -147,7 +156,7 @@ const resume = [
     company: 'University of Bath',
     role: 'Aerospace Engineering MEng 👨‍🎓',
 	dates: 'September 2019 - July 2024',
-    description: '- Currently studying at first-class level. \n- Final year modules:\n  - Final Year Project \n  - Heat transfer \n  - System modelling and simulation \n  - Business processes \n  - Advanced helicopter dynamics \n  - Spacecraft engineering ',
+    description: '- Graduated with First-Class Honours. \n- Armourers and Brasiers Award for Best Materials Project\n- Dissertation: An FE^2 Multiscale Approach using Deep Neural Networks as Surrogates for Mesoscale Simulations in Woven Composites ',
 	skills: ['MATLAB', 'Python', 'Aerospace', 'LaTeX', 'Ansys', 'Blender', 'DaVinci Resolve', 'Webflow'],
 	website: 'https://bath.ac.uk',
   image: '/images/bath.png',
