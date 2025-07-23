@@ -1,3 +1,30 @@
 .contact {
   flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__text {
+  font-size: 0.9rem;
+  color: var(--clr-fg);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact__link {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact__link:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 1rem;
+  }
 }

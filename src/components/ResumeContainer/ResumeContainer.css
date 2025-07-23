@@ -1,8 +1,9 @@
 .resume {
-  border-radius: 25px;
-  padding: 2em 2em 0em 2em;
+  border-radius: 20px;
+  padding: 1.5em 1.5em 0em 1.5em;
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
+  min-width: 800px;
   text-align: left;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear, background 0.5s;
@@ -67,9 +68,9 @@
 }
 
 .resume__skills-item {
-  margin: 0.5em;
+  margin: 0.3em;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--clr-fg-alt);
 }
 
@@ -92,21 +93,22 @@
 }
 
 .resume-role {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 .resume-company {
-  font-size: 1.1em;
-  padding: 0.2em 0em 1em 0em;
+  font-size: 1em;
+  padding: 0.2em 0em 0.8em 0em;
 }
 
 .resume-dates {
-  font-size: 0.9em;
+  font-size: 0.85em;
   text-align: right;
 }
 .resume-description {
-  font-size: 0.85em;
-  white-space: pre-wrap; /* or 'pre' */
+  font-size: 0.8em;
+  line-height: 1.4;
+  white-space: pre-wrap;
 }
 
 .resume-name {
@@ -131,4 +133,11 @@
   background-size: cover;
   opacity: 0.2; /* Adjust for desired transparency */
   z-index: -1; /* Ensures the image is behind the text */
+}
+
+@media (max-width: 768px) {
+  .resume {
+    min-width: auto;
+    width: 95%;
+  }
 }

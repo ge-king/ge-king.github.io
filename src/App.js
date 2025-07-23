@@ -9,12 +9,7 @@ import Skills from './components/Skills/Skills';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import Mach from './Projects/Mach'; 
-import Pubcrawl from './Projects/Pubcrawl';
-import Aiblog from './Projects/Aiblog';
-import Shuttle from './Projects/Shuttle';
-import Venus from './Projects/Venus';
-import Wing from './Projects/Wing';
+import Mach from './Projects/Mach';
 
 
 import './App.css';
@@ -44,11 +39,6 @@ const App = () => {
         <Routes>
           {/* Define routes for each project */}
           <Route path="/mach" element={<Mach />} />
-          <Route path="/pubcrawl" element={<Pubcrawl />} />
-          <Route path="/aiblog" element={<Aiblog />} />
-          <Route path="/shuttle" element={<Shuttle />} />
-          <Route path="/venus" element={<Venus />} />
-          <Route path="/wing" element={<Wing />} />
           
 
           {/* Default route */}

@@ -3,7 +3,7 @@ import './Footer.css'
 const Footer = () => (
   <footer className='footer'>
     <div>
-      George King 2023. All rights reserved.
+      George King 2025. All rights reserved.
     </div>
     
     <div>

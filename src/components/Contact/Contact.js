@@ -1,4 +1,4 @@
-import { contact } from '../../portfolio'
+import { contact, about } from '../../portfolio'
 import './Contact.css'
 
 const Contact = () => {
@@ -6,12 +6,25 @@ const Contact = () => {
 
   return (
     <section className='section contact center' id='contact'>
-      <h2 className='section__title'>Contact</h2>
-      <a href={`mailto:${contact.email}`}>
-        <span type='button' className='btn btn--outline'>
-          Email me
-        </span>
-      </a>
+      <p className='contact__text'>
+        You can reach me on{' '}
+        <a 
+          href={about.social?.linkedin} 
+          className='contact__link'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          LinkedIn
+        </a>
+        , or email me at{' '}
+        <a 
+          href={`mailto:${contact.email}`} 
+          className='contact__link'
+        >
+          {contact.email}
+        </a>
+        .
+      </p>
     </section>
   )
 }

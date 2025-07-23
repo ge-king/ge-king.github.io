@@ -8,8 +8,9 @@ body {
 
 .app {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--clr-fg);
+  font-size: 0.9rem;
   /*background: var(--clr-bg) radial-gradient(50px at var(--x) var(--y), var(--clr-primary), transparent);*/
   background: radial-gradient(300px circle at var(--x) var(--y), var(--clr-glow), var(--clr-bg));
 }
@@ -65,13 +66,14 @@ main {
 }
 
 .section {
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .section__title {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 .center {

@@ -8,13 +8,13 @@ const Skills = () => {
   return (
     <section className='section skills' id='skills'>
       <h2 className='section__title'>Skills</h2>
-      <ul className='skills__list'>
+      <div className='skills__list'>
         {skills.map((skill) => (
-          <li key={uniqid()} className='skills__list-item btn btn--plain'>
+          <span key={uniqid()} className='skills__item'>
             {skill}
-          </li>
+          </span>
         ))}
-      </ul>
+      </div>
     </section>
   )
 }

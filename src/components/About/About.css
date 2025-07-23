@@ -1,6 +1,6 @@
 .about {
   flex-direction: column;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 .about__name {
@@ -19,13 +19,13 @@
 
 .about__image {
   position: relative;
-  top: 7px; 
-  width: 10em; 
-  height: 10em; 
+  top: 5px; 
+  width: 8em; 
+  height: 8em; 
   border-radius: 50%; 
   object-fit: cover; 
-  margin-left: 20px;
-  margin-top: 20px; 
+  margin-left: 15px;
+  margin-top: 15px; 
 }
 
 @keyframes hue {
@@ -38,17 +38,19 @@
 }
 
 .about__role {
-  margin-top: 1.2em;
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
 .about__desc {
-  font-size: 1rem;
+  font-size: 0.95rem;
   max-width: 600px;
+  line-height: 1.4;
 }
 
 .about__desc,
 .about__contact {
-  margin-top: 2.4em;
+  margin-top: 1.8em;
 }
 
 .about .link--icon {
