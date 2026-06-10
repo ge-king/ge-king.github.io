@@ -1,9 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0E172A; /* fallback color */
-  background: radial-gradient(circle at var(--x) var(--y), var(--clr-primary) 50px, var(--clr-bg) 100px);
-  height: 100vh;
+  background-color: #ededed;
+  min-height: 100vh;
 }
 
 .app {

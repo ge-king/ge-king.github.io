@@ -9,7 +9,7 @@ const about = {
   name: 'George King',
   image: '/images/profile.png',
   description:
-    `Hi, I'm George King. I'm a Graduate Software Engineer at Ocado Technology, in the machine learning team. On this site you can find my past experience, projects, and education.`,
+    `Hi, I'm George King. I'm a Graduate Software Engineer at Ocado Technology, currently working in data science and trying to predict customer behaviour. On this site you can find my past experience, projects, and education.`,
   resume: 'https://example.com',
   social: {
     linkedin: 'https://linkedin.com/in/ge-king',
@@ -41,12 +41,13 @@ const resume = [
 	dates: 'September 2024 - Present',
   description: `Graduate engineer at Ocado Technology.
 
-  - Building and maintaining Java backend code in a monolithic system.
+  - Currently working in data science, trying to predict customer behaviour.
+  - Previously built and maintained Java backend code in a monolithic system.
   - Previously developed vision-based robot control using diffusion models.`,
   skills: [
     'Java', 'Spring Boot', 'AWS',
     'Python', 'PyTorch',
-    'Machine Learning', 'Vertex AI'
+    'Machine Learning', 'Data Science', 'Vertex AI'
   ],
 	website: 'https://ocadogroup.com',
   image: '/images/ocado.png',

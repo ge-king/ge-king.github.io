@@ -5,12 +5,34 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+  <script>
+    (function () {
+      var theme = 'light';
+
+      try {
+        var storedTheme = localStorage.getItem('themeName');
+        var hasStoredTheme = storedTheme === 'light' || storedTheme === 'dark';
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        theme = hasStoredTheme ? storedTheme : (prefersDark ? 'dark' : 'light');
+      } catch (error) {
+        theme = 'light';
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <style>
+    html,
     body {
       margin: 0;
       padding: 0;
-      background-color: #23283e; /* fallback color */
-      height: 100vh;
+      background-color: #ededed;
+      min-height: 100vh;
+    }
+
+    html[data-theme="dark"],
+    html[data-theme="dark"] body {
+      background-color: #0E172A;
     }
   </style>
     <meta charset="utf-8" />
@@ -25,9 +47,6 @@
     <title>George King</title>
   </head>
   <body>
-  <script>
-      document.body.style.backgroundColor = '#0E172A'; // use the dark theme background color
-    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 	

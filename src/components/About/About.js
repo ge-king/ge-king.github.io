@@ -4,7 +4,7 @@ import { about } from '../../portfolio'
 import './About.css'
 
 const About = () => {
-  const { name, role, description, resume, social, image} = about
+  const { role, description, social, image } = about
 
   return (
     <div className='about center'>
@@ -12,7 +12,7 @@ const About = () => {
       {role && <h2 className='about__role'>A {role}.</h2>}
       <div className='about__desc__and__img'>
         <p className='about__desc'>
-          Hi, I&apos;m <strong>George King</strong>. I&apos;m a Graduate Software Engineer at Ocado Technology, currently working with Java. On this site you can find my past experience, projects, and education.
+          {description}
         </p>
         {image && (
         <img src={image} alt="Your Name" className="about__image" />
