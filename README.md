@@ -1,68 +1,13 @@
-# Cleanfolio
+# georgeking.uk
 
-A clean and simple portfolio template built using React, if want a template built with HTML, CSS and JS then check out [Cleanfolio Minimal](https://github.com/rajshekhar26/cleanfolio-minimal).
+My personal site: a static page with an animated ASCII black hole, in light and dark themes. There is no build step: everything in `public/` is served as it is.
 
-## Preview
-
-[![Imgur](https://imgur.com/FwDMNEM.gif)](https://rajshekhar26.github.io/cleanfolio)
-
-[See Live](https://rajshekhar26.github.io/cleanfolio)
-
-## Instructions
-
-### Setup
+- `public/blackhole.js` traces light rays around the black hole in WebGL 2, then draws the result as glyphs.
+- `public/theme.js` is the light/dark switch. The starting theme is picked by a small script in `index.html`.
+- `public/trail.js` draws a faint grey trail of glyphs behind the cursor.
+- `public/index.html` holds the page text, plus a baked ASCII frame for browsers without WebGL.
 
 ```shell
-git clone https://github.com/rajshekhar26/cleanfolio
-cd cleanfolio
+npm start        # http://localhost:4173
+npm run deploy   # publishes public/ to the gh-pages branch
 ```
-
-If you use [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm) (optional) -
-
-```shell
-nvm install
-nvm use
-```
-
-Or -
-
-```shell
-fnm install
-fnm use
-```
-
-Install and run -
-
-```shell
-yarn
-yarn start
-```
-
-### How to use
-
-- Open `public/index.html` and replace -
-
-`<title>John Smith</title>` with `<title>Your Name</title>`.
-
-- Open `src/portfolio.js` and make changes.
-
-### Deployment
-
-- Go to `package.json` file and replace -
-
-`"homepage": "https://rajshekhar26.github.io/cleanfolio"`
-
-with `"homepage": "https://yourusername.github.io"`.
-
-- Push the changes.
-
-- Build and deploy -
-
-```shell
-yarn build
-yarn deploy
-```
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
