@@ -197,6 +197,7 @@ precision highp sampler2D;
 uniform sampler2D uCells;
 uniform sampler2D uGlyphs;
 uniform ivec2 uCell;
+uniform bool uLight;
 out vec4 outColor;
 
 vec3 heat(float t) {
@@ -214,7 +215,13 @@ void main() {
   int glyph = int(data.g * 255.0 + 0.5);
   ivec2 texel = ivec2(glyph * uCell.x + local.x, uCell.y - 1 - local.y);
   float ink = texelFetch(uGlyphs, texel, 0).r;
-  outColor = vec4(heat(data.r) * ink, 1.0);
+  if (uLight) {
+    // Black on white: faint parts of the disk are grey, bright parts are solid black.
+    vec3 shade = vec3(mix(0.62, 0.0, smoothstep(0.0, 0.75, data.r)));
+    outColor = vec4(mix(vec3(1.0), shade, ink), 1.0);
+  } else {
+    outColor = vec4(heat(data.r) * ink, 1.0);
+  }
 }`;
 
 function compile(gl, vertexSource, fragmentSource) {
@@ -358,6 +365,7 @@ function start(canvas) {
     gl.uniform1i(ascii.uniforms.uGlyphs, 1);
     gl.activeTexture(gl.TEXTURE0);
     gl.uniform2i(ascii.uniforms.uCell, state.cellW, state.cellH);
+    gl.uniform1i(ascii.uniforms.uLight, document.documentElement.dataset.theme === 'light' ? 1 : 0);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
 
@@ -425,10 +433,18 @@ function start(canvas) {
     update();
   }).observe(canvas);
   document.addEventListener('visibilitychange', update);
+  // Redraw straight away when the theme changes, even while the animation is paused.
+  new MutationObserver(() => render(clock)).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme'],
+  });
   reducedMotion.addEventListener('change', update);
   addEventListener('pointermove', (event) => {
-    if (event.pointerType === 'mouse') {
-      state.tiltTarget = (0.5 - event.clientY / innerHeight) * 0.09;
+    // A zero-height window (a background tab, say) would make the tilt infinite
+    // and turn every ray into NaN, so skip it and keep the tilt in range.
+    if (event.pointerType === 'mouse' && innerHeight > 0) {
+      const tilt = (0.5 - event.clientY / innerHeight) * 0.09;
+      state.tiltTarget = Math.max(-0.045, Math.min(0.045, tilt));
     }
   });
   canvas.addEventListener('webglcontextlost', () => {

@@ -1,9 +1,29 @@
 :root {
-  --black: #000;
+  --bg: #000;
   --ink: #f1e6d2;
   --muted: #9a8c78;
-  --ember: #e0a458;
+  --accent: #e0a458;
   --font: 'Fragment Mono', ui-monospace, Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: #fff;
+  --ink: #000;
+  --muted: #666;
+  --accent: #000;
+  color-scheme: light;
+}
+
+/* Before the theme script runs, or without JavaScript, follow the system setting. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg: #fff;
+    --ink: #000;
+    --muted: #666;
+    --accent: #000;
+    color-scheme: light;
+  }
 }
 
 * {
@@ -11,7 +31,7 @@
 }
 
 html {
-  background: var(--black);
+  background: var(--bg);
   color: var(--ink);
   font: 15px/1.6 var(--font);
   -webkit-text-size-adjust: 100%;
@@ -19,19 +39,22 @@ html {
 
 body {
   margin: 0;
+  background: var(--bg);
 }
 
 h1,
 h2,
 h3,
 p,
-ol {
+ol,
+ul {
   margin: 0;
   padding: 0;
   font: inherit;
 }
 
-ol {
+ol,
+ul {
   list-style: none;
 }
 
@@ -42,12 +65,13 @@ a {
 }
 
 a:hover {
-  color: var(--ember);
+  color: var(--accent);
   text-decoration-color: currentColor;
 }
 
-a:focus-visible {
-  outline: 2px solid var(--ember);
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -78,11 +102,29 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   font: 1.25vw/1.2 var(--font);
-  color: var(--ember);
+  color: var(--accent);
 }
 
 .live #still {
   display: none;
+}
+
+.theme {
+  position: absolute;
+  z-index: 3;
+  top: clamp(16px, 4vw, 48px);
+  right: clamp(16px, 4vw, 48px);
+  padding: 0.25em 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.87rem;
+  cursor: pointer;
+}
+
+.theme:hover {
+  color: var(--ink);
 }
 
 .intro {
@@ -91,16 +133,19 @@ a:focus-visible {
   left: clamp(16px, 4vw, 48px);
   bottom: clamp(16px, 4vw, 48px);
   /* Keeps the text legible where stars or lensed light pass behind it. */
-  background: var(--black);
-  box-shadow: 0 0 0 0.75em var(--black);
+  background: var(--bg);
+  box-shadow: 0 0 0 0.75em var(--bg);
 }
 
 .intro h1 {
-  font-size: 1.6rem;
-  line-height: 1.2;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 .intro p {
+  margin-top: 0.35rem;
+  font-size: 0.87rem;
   color: var(--muted);
 }
 
@@ -108,13 +153,14 @@ a:focus-visible {
   display: flex;
   gap: 1.5em;
   margin-top: 0.75em;
+  font-size: 0.87rem;
 }
 
 main {
   position: relative;
   z-index: 2;
   padding: clamp(48px, 10vw, 112px) clamp(16px, 4vw, 48px);
-  max-width: 54rem;
+  max-width: 58rem;
 }
 
 section + section {
@@ -126,23 +172,37 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.lede {
+  max-width: 62ch;
+}
+
 .entries li {
   display: grid;
-  grid-template-columns: 11ch minmax(0, 1fr);
+  grid-template-columns: 22ch minmax(0, 1fr);
   gap: 0 2ch;
 }
 
 .entries li + li {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .dates {
   color: var(--muted);
 }
 
-.entries p {
+.entries p,
+.notes {
   max-width: 62ch;
   color: var(--muted);
+}
+
+.notes {
+  margin-top: 1rem;
+  margin-left: calc(22ch + 2ch);
+}
+
+.notes li::before {
+  content: '- ';
 }
 
 #trail {
@@ -154,8 +214,20 @@ h2 {
   pointer-events: none;
 }
 
+footer {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(16px, 4vw, 48px) clamp(32px, 6vw, 64px);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 @media (max-width: 560px) {
   .entries li {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .notes {
+    margin-left: 0;
   }
 }
