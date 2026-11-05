@@ -201,8 +201,19 @@ h2 {
   margin-left: calc(22ch + 2ch);
 }
 
-.notes li::before {
+.notes li::before,
+.sites li::before {
   content: '- ';
+}
+
+.entries .sites {
+  display: block;
+  color: var(--muted);
+}
+
+.entries .sites li {
+  display: block;
+  margin: 0;
 }
 
 #trail {
